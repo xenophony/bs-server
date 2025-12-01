@@ -1,0 +1,15 @@
+turn
+target_index
+coverage_mean
+coverage_at_target
+coverage_gradient
+impossible_at_target
+remaining_sum
+remaining_count
+target_row
+target_col
+is_horizontal_hit
+is_vertical_hit
+is_diagonal_hit
+num_ships_that_can_fit_here
+max_ship_size_that_fits
