@@ -54,10 +54,11 @@ class SmartLLMAgentV2:
         self.api_call_count = 0  # Total API calls attempted
         self.api_success_count = 0  # Successful API calls
 
-        if client:
-            self.client = client
-        else:
+        # Only create client if needed
+        if client is None and model != "deterministic":
             self.client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        else:
+            self.client = client
 
     # ========================================
     # API METADATA CAPTURE
